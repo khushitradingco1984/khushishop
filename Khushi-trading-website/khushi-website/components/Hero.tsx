@@ -1,98 +1,70 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
-        minHeight: "75vh",
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        padding: "40px 20px",
+          "url('/hero-bg.jpg')", // Place a premium tile image in /public
       }}
     >
-      <div
-        style={{
-          background: "rgba(255,255,255,0.10)",
-          backdropFilter: "blur(10px)",
-          padding: "50px",
-          borderRadius: "20px",
-          maxWidth: "850px",
-          color: "#fff",
-        }}
-      >
-        <h4
-          style={{
-            color: "#FFD54F",
-            letterSpacing: "3px",
-            marginBottom: "15px",
-            textTransform: "uppercase",
-          }}
-        >
-          Premium Tiles & Interior Solutions
-        </h4>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-        <h1
-          style={{
-            fontSize: "60px",
-            marginBottom: "20px",
-            fontWeight: "700",
-          }}
-        >
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
+        <span className="inline-block rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm tracking-[3px] uppercase backdrop-blur">
+          Premium Tiles & Interior Solutions
+        </span>
+
+        <h1 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
           Khushi Trading Co.
         </h1>
 
-        <p
-          style={{
-            fontSize: "22px",
-            lineHeight: "1.8",
-            color: "#f5f5f5",
-            marginBottom: "35px",
-          }}
-        >
-          Transform your home with premium tiles, designer surfaces,
-          LED mirrors, wash basins and complete interior solutions.
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-200 md:text-xl">
+          Premium Designer Tiles, Highlighters, LED Mirrors, Wash Basins,
+          Table Tops & Complete Interior Solutions with Pan India Supply.
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          <button
-            style={{
-              background: "#FFD54F",
-              color: "#111",
-              border: "none",
-              padding: "16px 36px",
-              borderRadius: "8px",
-              fontSize: "18px",
-              fontWeight: "600",
-              cursor: "pointer",
-            }}
+        {/* Buttons */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+          <Link
+            href="/products"
+            className="rounded-lg bg-yellow-400 px-8 py-4 font-semibold text-black transition hover:bg-yellow-300"
           >
-            View Products
-          </button>
+            Explore Products
+          </Link>
 
-          <button
-            style={{
-              background: "transparent",
-              color: "#fff",
-              border: "2px solid white",
-              padding: "16px 36px",
-              borderRadius: "8px",
-              fontSize: "18px",
-              cursor: "pointer",
-            }}
+          <Link
+            href="/contact"
+            className="rounded-lg border border-white px-8 py-4 font-semibold transition hover:bg-white hover:text-black"
           >
             Contact Us
-          </button>
+          </Link>
+        </div>
+
+        {/* Trust Badges */}
+        <div className="mt-14 grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+          <div>
+            <h3 className="text-3xl font-bold">15+</h3>
+            <p className="text-gray-300">Product Categories</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold">200+</h3>
+            <p className="text-gray-300">Premium Designs</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold">Pan India</h3>
+            <p className="text-gray-300">Supply Network</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold">Quality</h3>
+            <p className="text-gray-300">Trusted Products</p>
+          </div>
         </div>
       </div>
     </section>

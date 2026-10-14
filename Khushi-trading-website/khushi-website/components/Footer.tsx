@@ -1,4 +1,10 @@
 import Link from "next/link";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -75,7 +81,8 @@ export default function Footer() {
             <p>📧 khushitradingco1984@gmail.com</p>
 
             <p>
-              📍 1122, Pooth Kalan,<br />
+              📍 1122, Pooth Kalan,
+              <br />
               Rohini, Delhi - 110086
             </p>
 
@@ -101,10 +108,58 @@ export default function Footer() {
               href="https://wa.me/919354530349"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition"
             >
               WhatsApp Now
             </a>
+
+            <div className="pt-6">
+
+              <h4 className="text-white font-semibold mb-4">
+                Follow Us
+              </h4>
+
+              <div className="flex gap-4">
+
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-pink-500 text-white hover:scale-110 transition"
+                >
+                  <FaInstagram size={18} />
+                </a>
+
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-white hover:scale-110 transition"
+                >
+                  <FaFacebookF size={18} />
+                </a>
+
+                <a
+                  href="https://youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-red-600 text-white hover:scale-110 transition"
+                >
+                  <FaYoutube size={18} />
+                </a>
+
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-sky-700 text-white hover:scale-110 transition"
+                >
+                  <FaLinkedin size={18} />
+                </a>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -119,7 +174,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
           <p className="text-gray-500 text-sm text-center">
-            © 2026 KHISHISHOP.IN | All Rights Reserved.
+            © 2026 KHUSHISHOP.IN | All Rights Reserved.
           </p>
 
           <p className="text-gray-500 text-sm text-center">

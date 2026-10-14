@@ -19,33 +19,42 @@ export default function Stats() {
   ];
 
   return (
+    <section className="bg-black py-24">
+      <div className="mx-auto max-w-7xl px-6">
 
-    <section className="py-24 bg-black">
+        <div className="mb-16 text-center">
+          <span className="text-sm uppercase tracking-[4px] text-yellow-400 font-semibold">
+            Our Achievements
+          </span>
 
-      <div className="max-w-7xl mx-auto px-6">
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white">
+            Trusted Across India
+          </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">          {stats.map((item) => (
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-400">
+            Delivering premium tiles and interior solutions with quality,
+            trust and professional service for more than four decades.
+          </p>
+        </div>
 
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {stats.map((item) => (
             <div
               key={item.title}
-              className="bg-white/5 backdrop-blur-md border border-yellow-500/30 rounded-3xl p-10 text-center hover:border-yellow-400 hover:-translate-y-2 transition duration-300 shadow-xl"
+              className="rounded-3xl border border-yellow-500/20 bg-white/5 p-10 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400 hover:bg-white/10"
             >
-
-              <h2 className="text-5xl font-extrabold text-yellow-400">
+              <h3 className="text-5xl font-extrabold text-yellow-400">
                 {item.number}
-              </h2>
+              </h3>
 
-              <p className="text-white text-xl mt-4 font-semibold">
+              <p className="mt-4 text-lg font-semibold text-white">
                 {item.title}
               </p>
-
             </div>
-
-          ))}        </div>
+          ))}
+        </div>
 
       </div>
-
     </section>
-
   );
 }
